@@ -1,0 +1,22 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var escondido = Math.round(Math.random()*10);
+console.log(escondido);
+var chute = prompt("Chute um numero");
+
+if(escondido == chute) {
+	escreve("Acertou !");
+}else {
+	escreve("Errou !");
+}
+
+</script>

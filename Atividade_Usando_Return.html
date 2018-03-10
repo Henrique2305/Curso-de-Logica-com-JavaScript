@@ -1,0 +1,39 @@
+<script>
+
+ function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function calculaConsumo(distancia, tanque) {
+	var consumo = distancia/tanque;
+	return consumo;
+}
+
+function calculaPrecoPorKm(precoLitro, consumo) {
+	var precoPorKm = precoLitro/consumo;
+	return precoPorKm;
+}
+
+var tanque = prompt("Digite a capacidade do tanque");
+var caminhoComGasolina = prompt("Digite a distância com gasolina");
+var caminhoComAlcool = prompt("Digite a distância com álcool");
+var consumoDeGasolina = calculaConsumo(caminhoComGasolina,tanque);
+escreve("Consumo com gasolina:" + consumoDeGasolina);
+
+var consumoDeAlcool = calculaConsumo(caminhoComAlcool,tanque);
+escreve("Consumo com álcool:" + consumoDeAlcool);
+
+var precoLitroGasolina = prompt("Digite o preço da gasolina");
+var precoLitroAlcool = prompt("Digite o preço da álcool");
+var precoKmGasolina = calculaPrecoPorKm(precoLitroGasolina,consumoDeGasolina);
+escreve("Preço/Km gasolina:" + precoKmGasolina);
+
+var precoKmAlcool = calculaPrecoPorKm(precoLitroAlcool,consumoDeAlcool);
+escreve("Preço/Km Álcool:" + precoKmAlcool);
+
+</script>

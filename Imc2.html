@@ -1,0 +1,33 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>")
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function calculaImc(peso, altura) {
+	var imc = peso/(altura*altura);
+	return imc;
+}
+
+var peso1 = parseFloat(prompt("Digite o peso da pesso1:").replace(",","."));
+var altura1 = parseFloat(prompt("Digite sua altura1").replace(",","."));
+var imc1 = calculaImc(peso1, altura1);
+
+escreve("O imc é " + imc1);
+
+if(mostraImc > 35) {
+	escreve("Você está gordo, seu imc é " + imc1);
+}
+if(mostraImc < 18.5) {
+	escreve("Você está abaixo do peso, seu imc é " + imc1);
+}
+if(18.5 <= imc1 && imc1 <= 35){
+	escreve("Você está bem");
+}
+
+</script>

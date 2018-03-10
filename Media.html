@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<script>
+
+function separaLinha() {
+	document.write("<hr>" + "<hr>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+} 
+
+var Henrique = 15;
+var Danilo = 25;
+var Kleber = 35;
+var Dario = 38;
+var soma = Henrique + Danilo + Kleber + Dario;
+var media = soma/3;
+
+escreve("Soma das idades:");
+
+escreve(soma);
+
+escreve("Média das idades:");
+
+escreve(Math.round(media));
+
+</script>

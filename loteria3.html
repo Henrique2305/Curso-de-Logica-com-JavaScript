@@ -1,0 +1,36 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function sorteia(numero) {
+	var sorteado = Math.round(Math.random()*numero);
+	return sorteado;
+}
+
+function pegaNumero() {
+	var numero = parseInt(prompt("Digite um número"));
+	while(isNaN(numero)) {
+		numero = parseInt(prompt("Digite um número"));
+	}
+	return numero;
+}
+
+var escondido = sorteia(10);
+console.log(escondido);
+escreve(escondido);
+
+var chute = pegaNumero();
+while(chute != escondido) {
+	chute = pegaNumero();
+}
+
+escreve("Acertou");
+
+</script>

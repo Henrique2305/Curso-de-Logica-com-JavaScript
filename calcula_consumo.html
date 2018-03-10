@@ -1,0 +1,32 @@
+<h3>Álcool ou Gasolina?</h3>
+
+<script>
+
+function separaLinha() {
+  document.write("<hr>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var tanque = prompt("Digite a capacidade do tanque");
+var caminhoComGasolina = prompt("Digite a distância com gasolina");
+var caminho_Com_Alcool = prompt("Digite a distância com álcool");
+var consumoDeGasolina = caminhoComGasolina / tanque;
+var consumo_De_Alcool = caminho_Com_Alcool / tanque;
+var precoLitroGasolina = prompt("Digite o preço da gasolina");
+var precoLitroAlcool = prompt("Digite o preço da álcool");
+var precoKmGasolina = precoLitroGasolina / consumoDeGasolina;
+var precoKmAlcool = precoLitroAlcool / consumo_De_Alcool;
+
+escreve("consumo com gasolina:" + "<br>" + Math.round(consumoDeGasolina));
+
+escreve("consumo com álcool:" + "<br>" + Math.round(consumo_De_Alcool));
+
+escreve("Preço/Km da gasolina:" + "<br>" + precoKmGasolina.toFixed(2));
+
+escreve("Preço/Km do álcool:" + "<br>" + precoKmGasolina.toFixed(2));
+
+</script>

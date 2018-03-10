@@ -1,0 +1,36 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var diaNasc = prompt("Digite o dia");
+var mesNasc = prompt("Digite o mês");
+var anoNasc = prompt("Digite o ano");
+var diaAtual = 28;
+var mesAtual = 1;
+var anoAtual = 2017;
+var idadeCompleta = anoAtual - anoNasc;
+
+if(mesAtual < mesNasc) {
+	escreve("Você tem " + (idadeCompleta - 1) + " anos");
+}
+if(mesAtual > mesNasc) {
+	escreve("você tem " + idadeCompleta + " anos");
+}
+if(diaAtual < diaNasc && mesAtual == mesNasc) {
+	escreve("Você tem " + (idadeCompleta - 1) + " anos");
+}
+if(diaAtual > diaNasc && mesAtual == mesNasc) {
+	escreve("Você tem " + idadeCompleta + " anos");
+}
+if(diaAtual == diaNasc && mesAtual == mesNasc) {
+	escreve("Parabéns! você tem " + idadeCompleta + " anos");
+}
+
+</script>

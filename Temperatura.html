@@ -1,0 +1,41 @@
+<center><h1>Temperatura</h1></center>
+
+<script>
+
+function separaLinha() {
+	document.write("<hr>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+}
+
+function transformaFahrenheit(dia) {
+	var calculaF = dia*1.8 + 32;
+	return calculaF;
+}
+
+var diaOntem = 26;
+var diaHoje = 27;
+var diaAmanha = 20;
+
+var diaOntem = Math.round(transformaFahrenheit(diaOntem));
+escreve("Ontem: " + diaOntem + "F ");
+
+var diaHoje = Math.round(transformaFahrenheit(diaHoje));
+escreve("Hoje: " + diaHoje + "F ");
+
+var diferenca = Math.round(diaHoje - diaOntem);
+escreve("Diferença: " + diferenca + "F");
+separaLinha();
+
+var diaHoje1 = Math.round(transformaFahrenheit(diaHoje));
+escreve("Hoje: " + diaHoje + "F ");
+
+var diaAmanha = Math.round(transformaFahrenheit(diaAmanha));
+escreve("Amanhã: " + diaAmanha + "F ");
+
+var difereca1 = Math.round(diaAmanha - diaHoje);
+escreve("Diferença: " + difereca1 + "F");
+
+</script>

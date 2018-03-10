@@ -1,0 +1,38 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function transformaEmFahrenheit(celsius) {
+	var fahrenheit = celsius*1.8 + 32;
+	return fahrenheit;
+}
+
+function calculaDiferenca(numero1, numero2) {
+	var diferenca = numero1 - numero2;
+	return diferenca;
+}
+
+var celsiusOntem = prompt("Temperatura de ontem em Celsius");
+var celsiusHoje = prompt("Temperatura de hoje em Celsius");
+var celsiusAmanha = prompt("Temperatura de Amanhã em Celsius");
+
+var fahrenheitOntem = Math.round(transformaEmFahrenheit(celsiusOntem));
+var fahrenheitHoje = Math.round(transformaEmFahrenheit(celsiusHoje));
+var fahrenheitAmanha = Math.round(transformaEmFahrenheit(celsiusAmanha));
+
+var diferenca1 = calculaDiferenca(fahrenheitHoje, fahrenheitOntem);
+var diferenca2 = calculaDiferenca(fahrenheitAmanha, fahrenheitHoje);
+
+escreve("Ontem: " + fahrenheitOntem + "F Hoje: " + fahrenheitHoje + "F Diferença: " + diferenca1);
+separaLinha();
+
+escreve("Hoje: " + fahrenheitHoje +"F Amanhã: " + fahrenheitAmanha + "F Diferença: " + diferenca2);
+
+</script>

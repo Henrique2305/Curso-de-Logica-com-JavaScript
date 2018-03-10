@@ -1,0 +1,24 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var anoDeCopa = 1930;
+var anoLimite = prompt("até que ano ?");
+
+while(anoDeCopa <= anoLimite) {
+	if(anoDeCopa != 1942 && anoDeCopa != 1946) {
+	escreve(anoDeCopa + " tem copa!");
+	}
+	anoDeCopa = anoDeCopa + 4;
+}
+
+escreve("Esses foram os de Copa até o " + anoLimite);
+
+</script>

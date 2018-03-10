@@ -1,0 +1,26 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var diaDeNascimento = parseInt(prompt("Que dia você nasceu"));
+var mesDeNascimento = parseInt(prompt("Que mês você nasceu"));
+var anoDeNascimento = parseInt(prompt("Que ano você nasceu"));
+var diaAtual = 27;
+var mesAtual = 1;
+var anoAtual = 2017;
+
+if(mesAtual < mesDeNascimento) {
+	calculaIdade -1;
+}
+
+var calculaIdade = anoAtual - anoDeNascimento;
+escreve("Você tem " + calculaIdade + " anos");
+
+</script>

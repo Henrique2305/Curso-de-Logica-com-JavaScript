@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script>
+
+function sepaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var quantidadePessoas = prompt("Quantas pessoas ?");
+var contador = 1;
+var soma = 0;
+
+while(contador <= quantidadePessoas) {
+	var guardaIdade = prompt("Qual é a sua idade?");
+	soma = guardaIdade + soma;
+	contador = contador + 1;
+}
+
+
+var media = soma / quantidadePessoas;
+escreve("Média das Idades é: " + media);
+
+</script>

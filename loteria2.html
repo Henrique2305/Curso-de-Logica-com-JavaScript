@@ -1,0 +1,34 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function sorteia(numero) {
+	var sorteado = Math.round(Math.random()*numero);
+	return sorteado;
+}
+
+var escondido = sorteia(10);
+console.log(escondido);
+
+var chute = prompt("Chute um número");
+
+while(isNaN(chute)) {
+	chute = prompt("Digite um número");
+}
+
+
+
+if(chute == escondido) {
+	escreve("Acertou !");
+}else {
+	escreve("Errou!");
+}
+
+</script>

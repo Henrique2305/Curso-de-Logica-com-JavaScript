@@ -1,0 +1,32 @@
+<script>
+
+function separaLinha() {
+	document.write("<hr>")
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function mostraImc(peso, altura) {
+	var imc1 = peso1/(altura1*altura1);
+	escreve("imc é:" + imc1.toFixed(2));
+}
+
+var peso1 = prompt("Digite o peso da pesso1:");
+var altura1 = prompt("Digite sua altura1");
+
+mostraImc(peso1, altura1);
+
+var peso2 = prompt("Digite o peso da pessoa2:");
+var altura2 = prompt("Digite sua altura2");
+
+mostraImc(peso2, altura2);
+
+var peso3 = prompt("Digite o peso da pesso3:");
+var altura3 = prompt("Digite sua altura3");
+
+mostraImc(peso3, altura3);
+
+</script>

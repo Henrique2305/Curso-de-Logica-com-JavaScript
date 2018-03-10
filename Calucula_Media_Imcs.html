@@ -1,0 +1,30 @@
+<script>
+
+ function separaLinha() {
+	document.write("<br>");
+ }
+
+ function escreve(frase) {
+	document.write(frase);
+	separaLinha;
+ } 
+
+ function calculaImc(peso, altura) {
+	var imc = peso/(altura*altura);
+	return imc;
+ }
+
+ var peso1 = prompt("Peso pessoa1");
+ var altura1 = prompt("altura pessoa1");
+var imc1 = calculaImc(peso1, altura1);
+ var peso2 = prompt("Peso pessoa2");
+ var altura2 = prompt("altura pessoa2");
+var imc2 = calculaImc(peso2, altura2);
+ var peso3 = prompt("Peso pessoa3");
+ var altura3 = prompt("altura pessoa3");
+var imc3 = calculaImc(peso3, altura3);
+
+var media = (imc1 + imc2 + imc3)/3;
+escreve("A média dos Imcs é:" + media);
+
+</script>

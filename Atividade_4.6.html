@@ -1,0 +1,34 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function sorteia(numero) {
+	var sorteado = Math.round(Math.random()*numero);
+	return sorteado;
+}
+
+var escondido = sorteia(20);
+console.log(escondido);
+var chute = prompt("Chute um numero");
+
+if(isNaN(chute)) {
+	escreve("Você não digitou um número");
+}
+if(escondido == chute) {
+	escreve("Acertou !");
+}
+if(chute > escondido) {
+	escreve("Seu numero foi maior que o pensado");
+}
+if(chute < escondido) {
+	escreve("Seu numero foi menor que o pensado");
+}
+
+</script>

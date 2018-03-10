@@ -1,0 +1,39 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function calculaPontos(vitorias, empates) {
+	var soma = (vitorias * 3) + empates;
+	return soma;
+}
+
+var nome1 = prompt("Nome do time1");
+var vitorias1 = parseInt(prompt("Quantas vitorias o " + nome1 + " ganhou ?"));
+var empates1 = parseInt(prompt("Quantos empates o " + nome1 + " empatou ?"));
+var nome2 = prompt("Nome time2");
+var vitorias2 = parseInt(prompt("Quantas vitorias o " + nome2 + " ganhou ?"));
+var empates2 = parseInt(prompt("Quantos empates o " + nome2 + " empatou ?"));
+
+var pontos1 = calculaPontos(vitorias1, empates1);
+var pontos2 = calculaPontos(vitorias2, empates2);
+
+//se pontos1 maior que pontos2
+
+if(pontos1 > pontos2) {
+	escreve(nome1 + " está ganhando");
+}
+if(pontos1 < pontos2) {
+	escreve(nome2 + " está ganhando");
+}
+if(pontos1 == pontos2) {
+	escreve(nome1 + " e " + nome2 + "estão empatados");
+}
+
+</script>

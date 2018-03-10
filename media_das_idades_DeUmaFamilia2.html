@@ -1,0 +1,23 @@
+<script>
+
+function sepaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+var quantidadeDePessoas = prompt("Quantas pessoas ?");
+var soma = 0;
+
+for(var contador = 1; contador <= quantidadeDePessoas; contador = contador + 1) {
+	var idade = prompt("...");
+	soma = idade + soma;
+}
+
+var media = soma / quantidadePessoas;
+escreve("Média das Idades é: " + media);
+
+</script>

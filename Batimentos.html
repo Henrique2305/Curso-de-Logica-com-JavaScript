@@ -1,0 +1,42 @@
+<script>
+
+function separaLinha() {
+	document.write("<br>");
+}
+
+function escreve(frase) {
+	document.write(frase);
+	separaLinha();
+}
+
+function calculoDeDias(idade) {
+	var  diasVividos = idade * 365;
+	return diasVividos;
+}
+
+function calculoDeBatimentos(dias) {
+	var batimentos = 80*60*24*dias;
+	return batimentos;
+}
+
+var idade1 = prompt("Idade pessoa1");
+var idade2 = prompt("Idade pessoa2");
+var idade3 = prompt("Idade pessoa3");
+var diasPessoa1 = calculoDeDias(idade1);
+var diasPessoa2 = calculoDeDias(idade2);
+var diasPessoa3 = calculoDeDias(idade3);
+
+escreve("Dias pessoa1: " + diasPessoa1);
+escreve("Dias pessoa2: " + diasPessoa2);
+escreve("Dias pessoa3: " + diasPessoa3);
+separaLinha();
+
+var batimentos1 =  calculoDeBatimentos(diasPessoa1);
+var batimentos2 =  calculoDeBatimentos(diasPessoa2);
+var batimentos3 =  calculoDeBatimentos(diasPessoa3);
+
+escreve("Pessoa1 teve " + batimentos1 + " Batimentos");
+escreve("Pessoa2 teve " + batimentos2 + " Batimentos");
+escreve("Pessoa3 teve " + calculoDeBatimentos(diasPessoa3) + " Batimentos");
+
+</script>
